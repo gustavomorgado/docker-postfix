@@ -4,6 +4,9 @@ MAINTAINER Elliott Ye
 # Set noninteractive mode for apt-get
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set Timezone to America/Sao_Paulo
+RUN cp /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+
 # Update
 RUN apt-get update
 
